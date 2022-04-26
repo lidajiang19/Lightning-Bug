@@ -1,0 +1,355 @@
+{
+	"textures": [
+		{
+			"image": "firefly",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1308,
+				"h": 90
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "firefly-6",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 8,
+						"w": 89,
+						"h": 71
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 89,
+						"h": 71
+					}
+				},
+				{
+					"filename": "firefly-1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 88,
+						"h": 72
+					},
+					"frame": {
+						"x": 89,
+						"y": 0,
+						"w": 88,
+						"h": 72
+					}
+				},
+				{
+					"filename": "firefly-2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 88,
+						"h": 72
+					},
+					"frame": {
+						"x": 177,
+						"y": 0,
+						"w": 88,
+						"h": 72
+					}
+				},
+				{
+					"filename": "firefly-5",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 9,
+						"w": 89,
+						"h": 72
+					},
+					"frame": {
+						"x": 265,
+						"y": 0,
+						"w": 89,
+						"h": 72
+					}
+				},
+				{
+					"filename": "firefly-11",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 3,
+						"w": 84,
+						"h": 83
+					},
+					"frame": {
+						"x": 354,
+						"y": 0,
+						"w": 84,
+						"h": 83
+					}
+				},
+				{
+					"filename": "firefly-15",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 5,
+						"w": 84,
+						"h": 83
+					},
+					"frame": {
+						"x": 438,
+						"y": 0,
+						"w": 84,
+						"h": 83
+					}
+				},
+				{
+					"filename": "firefly-16",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 4,
+						"w": 84,
+						"h": 83
+					},
+					"frame": {
+						"x": 522,
+						"y": 0,
+						"w": 84,
+						"h": 83
+					}
+				},
+				{
+					"filename": "firefly-10",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 2,
+						"w": 82,
+						"h": 84
+					},
+					"frame": {
+						"x": 606,
+						"y": 0,
+						"w": 82,
+						"h": 84
+					}
+				},
+				{
+					"filename": "firefly-12",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 84,
+						"h": 84
+					},
+					"frame": {
+						"x": 688,
+						"y": 0,
+						"w": 84,
+						"h": 84
+					}
+				},
+				{
+					"filename": "firefly-13",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 4,
+						"w": 83,
+						"h": 84
+					},
+					"frame": {
+						"x": 772,
+						"y": 0,
+						"w": 83,
+						"h": 84
+					}
+				},
+				{
+					"filename": "firefly-14",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 4,
+						"w": 83,
+						"h": 84
+					},
+					"frame": {
+						"x": 855,
+						"y": 0,
+						"w": 83,
+						"h": 84
+					}
+				},
+				{
+					"filename": "firefly-9",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 2,
+						"w": 82,
+						"h": 84
+					},
+					"frame": {
+						"x": 938,
+						"y": 0,
+						"w": 82,
+						"h": 84
+					}
+				},
+				{
+					"filename": "firefly-3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 1,
+						"w": 72,
+						"h": 89
+					},
+					"frame": {
+						"x": 1020,
+						"y": 0,
+						"w": 72,
+						"h": 89
+					}
+				},
+				{
+					"filename": "firefly-8",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 0,
+						"w": 72,
+						"h": 89
+					},
+					"frame": {
+						"x": 1092,
+						"y": 0,
+						"w": 72,
+						"h": 89
+					}
+				},
+				{
+					"filename": "firefly-4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 0,
+						"w": 71,
+						"h": 90
+					},
+					"frame": {
+						"x": 1164,
+						"y": 0,
+						"w": 71,
+						"h": 90
+					}
+				},
+				{
+					"filename": "firefly-7",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 90,
+						"h": 90
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 0,
+						"w": 73,
+						"h": 90
+					},
+					"frame": {
+						"x": 1235,
+						"y": 0,
+						"w": 73,
+						"h": 90
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.7"
+	}
+}

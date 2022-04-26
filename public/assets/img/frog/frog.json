@@ -1,0 +1,229 @@
+{
+	"textures": [
+		{
+			"image": "frog",
+			"format": "RGBA8888",
+			"size": {
+				"w": 117,
+				"h": 1880
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "frog-still-6",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 287,
+						"h": 287
+					},
+					"spriteSourceSize": {
+						"x": 85,
+						"y": 0,
+						"w": 117,
+						"h": 287
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 117,
+						"h": 287
+					}
+				},
+				{
+					"filename": "frog-still-5",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 286,
+						"h": 287
+					},
+					"spriteSourceSize": {
+						"x": 84,
+						"y": 38,
+						"w": 117,
+						"h": 249
+					},
+					"frame": {
+						"x": 0,
+						"y": 287,
+						"w": 117,
+						"h": 249
+					}
+				},
+				{
+					"filename": "frog-still-7",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 286,
+						"h": 287
+					},
+					"spriteSourceSize": {
+						"x": 84,
+						"y": 38,
+						"w": 117,
+						"h": 249
+					},
+					"frame": {
+						"x": 0,
+						"y": 536,
+						"w": 117,
+						"h": 249
+					}
+				},
+				{
+					"filename": "frog-still-8",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 287,
+						"h": 287
+					},
+					"spriteSourceSize": {
+						"x": 85,
+						"y": 79,
+						"w": 117,
+						"h": 208
+					},
+					"frame": {
+						"x": 0,
+						"y": 785,
+						"w": 117,
+						"h": 208
+					}
+				},
+				{
+					"filename": "frog-still-4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 286,
+						"h": 287
+					},
+					"spriteSourceSize": {
+						"x": 84,
+						"y": 88,
+						"w": 117,
+						"h": 199
+					},
+					"frame": {
+						"x": 0,
+						"y": 993,
+						"w": 117,
+						"h": 199
+					}
+				},
+				{
+					"filename": "frog-still-9",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 287,
+						"h": 287
+					},
+					"spriteSourceSize": {
+						"x": 85,
+						"y": 119,
+						"w": 117,
+						"h": 168
+					},
+					"frame": {
+						"x": 0,
+						"y": 1192,
+						"w": 117,
+						"h": 168
+					}
+				},
+				{
+					"filename": "frog-still-3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 287,
+						"h": 287
+					},
+					"spriteSourceSize": {
+						"x": 85,
+						"y": 142,
+						"w": 117,
+						"h": 145
+					},
+					"frame": {
+						"x": 0,
+						"y": 1360,
+						"w": 117,
+						"h": 145
+					}
+				},
+				{
+					"filename": "frog-still-2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 287,
+						"h": 287
+					},
+					"spriteSourceSize": {
+						"x": 85,
+						"y": 158,
+						"w": 117,
+						"h": 129
+					},
+					"frame": {
+						"x": 0,
+						"y": 1505,
+						"w": 117,
+						"h": 129
+					}
+				},
+				{
+					"filename": "frog-still-1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 287,
+						"h": 287
+					},
+					"spriteSourceSize": {
+						"x": 85,
+						"y": 164,
+						"w": 117,
+						"h": 123
+					},
+					"frame": {
+						"x": 0,
+						"y": 1634,
+						"w": 117,
+						"h": 123
+					}
+				},
+				{
+					"filename": "frog-still-10",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 287,
+						"h": 287
+					},
+					"spriteSourceSize": {
+						"x": 85,
+						"y": 164,
+						"w": 117,
+						"h": 123
+					},
+					"frame": {
+						"x": 0,
+						"y": 1757,
+						"w": 117,
+						"h": 123
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "http://free-tex-packer.com",
+		"version": "0.6.7"
+	}
+}
