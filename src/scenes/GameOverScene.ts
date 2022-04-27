@@ -1,8 +1,10 @@
-export default class EndGameScene extends Phaser.Scene {
+export default class GameOverScene extends Phaser.Scene {
   constructor() {
-    super({ key: 'EndGameScene' })
+    super({ key: 'GameOverScene' })
   }
-  preload() {}
+  preload() {
+    this.load.image('gameover')
+  }
 
   create() {
     console.log('EndGameScene')
@@ -22,7 +24,8 @@ export default class EndGameScene extends Phaser.Scene {
       })
       .setOrigin(0.5, 0.5)
 
-      this.load.image(0, 0, 'play-again-button')
+    //pic button
+
 
 
     // TODO: Add Game Over text (not as image)
