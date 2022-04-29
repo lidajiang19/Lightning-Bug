@@ -1,8 +1,9 @@
 import 'phaser'
 import GameOverScene from './scenes/GameOverScene'
-// import LevelOneScene from './scenes/LevelOneScene'
+import LevelOneScene from './scenes/LevelOneScene'
 import StartScene from './scenes/StartScene'
-// import PreloaderScene from './scenes/PreloaderScene'
+import PreloaderScene from './scenes/PreloaderScene'
+import NicelyDownScene from'./scenes/NicelyDownScene'
 
 const config = {
   type: Phaser.AUTO,
@@ -15,7 +16,13 @@ const config = {
       debug: true,
     },
   },
-  scene: [StartScene],
+  scene: [
+    // PreloaderScene,
+    // StartScene,
+    LevelOneScene
+    // NicelyDownScene,
+    // GameOverScene,
+  ],
 }
-// StartScene, PreloaderScene, LevelOneScene,
+// PreloaderScene, StartScene, LevelOneScene,NicelyDownScene,GameOverScene
 new Phaser.Game(config)
