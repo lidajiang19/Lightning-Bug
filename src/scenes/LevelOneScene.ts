@@ -1,6 +1,6 @@
 import FrogSprite from '../objects/FrogSprite'
 import FireflySprite from '../objects/FireflySprite'
-import LightSprite from '../objects/LightSprite'
+// import LightSprite from '../objects/LightSprite'
 // import GameOverScene from './GameOverScene'
 // import { ObjectFlags } from 'typescript'
 
@@ -15,12 +15,13 @@ export default class LevelOneScene extends Phaser.Scene {
   frog2!: FrogSprite
   firefly!: FireflySprite
 
-  light1!: LightSprite
-  light2!: LightSprite
-  lightGroup!: Phaser.Physics.Arcade.Group
+  // light1!: LightSprite
+  // light2!: LightSprite
+  // lightGroup!: Phaser.Physics.Arcade.Group
 
   constructor() {
     super({ key: 'LevelOneScene' })
+
   }
 
   create() {
@@ -32,7 +33,7 @@ export default class LevelOneScene extends Phaser.Scene {
     this.frog1 = new FrogSprite(this, 200, 480).setScale(1 / 2).refreshBody()
     this.frog2 = new FrogSprite(this, 800, 550).setScale(1 / 2).refreshBody()
 
-    // something happens
+    // frog prey
     this.frog1.prey()
     this.frog2.prey()
 
@@ -40,7 +41,7 @@ export default class LevelOneScene extends Phaser.Scene {
     this.firefly = new FireflySprite(this, 20, 400)
       .setScale(1 / 2)
       .refreshBody()
-    this.firefly.fly()
+    // this.firefly.fly()
 
     //light
     let lights = this.physics.add.group()
@@ -50,23 +51,36 @@ export default class LevelOneScene extends Phaser.Scene {
       for (let i = 1; i < 7; i++) {
         let xx = Phaser.Math.Between(0, 1000)
         let yy = Phaser.Math.Between(0, 720)
-        this.lightGroup.create(xx, yy, 'light' + i)
+        lights.create(xx, yy, 'light' + i)
       }
     }
-    lights.children.iterate((child) => {})
+    // lights.children.iterate((child) => {})
 
-    this.lightGroup.get(300, 300, 'round-1')
-    this.lightGroup.get(200, 200, 'round-2')
+    // this.lightGroup.get(300, 300, 'round-1')
+    // this.lightGroup.get(200, 200, 'round-2')
 
     //collison
 
     this.physics.add.overlap(
-      lights.children.entries,
       this.firefly,
+      lights.children.entries,
       this.collectLights,
     )
 
-    this.physics.add.overlap(this.frog1, this.firefly, this.frogOverlapped)
+    this.physics.add.overlap(
+      this.firefly,
+      this.frog1,
+      this.frogOverlapped,
+
+    )
+
+    this.physics.add.overlap(
+      this.firefly,
+      this.frog2,
+      this.frogOverlapped,
+    )
+
+    // this.physics.add.overlap(this.frog1, this.firefly, this.frogOverlapped)
 
     //   frogOverlapped(firefly: FireflySprite, frog1: FrogSprite) {
     //   console.log('YOU LOSE')
@@ -91,7 +105,9 @@ export default class LevelOneScene extends Phaser.Scene {
     })
   }
 
+
   update() {
+
     //cursors
     if (this.cursors.left.isDown) {
       console.log('left is pressed')
@@ -116,42 +132,40 @@ export default class LevelOneScene extends Phaser.Scene {
   collectLights(firefly,lights) {
     lights.disableBody(true, true)
     switch (lights.texture.key) {
-      case 'light1':
+      case 'light-1':
         this.score += 5
         this.scoreUI.setText('TOTAL SCORE: ' + this.score)
         break
-      case 'light2':
+      case 'light-2':
         this.score += 4
         this.scoreUI.setText('TOTAL SCORE: ' + this.score)
         break
-      case 'light3':
+      case 'light-3':
         this.score += 4
         this.scoreUI.setText('TOTAL SCORE: ' + this.score)
         break
-      case 'light4':
+      case 'light-4':
         this.score += 3
         this.scoreUI.setText('TOTAL SCORE: ' + this.score)
         break
-      case 'light5':
+      case 'light-5':
         this.score += 2
         this.scoreUI.setText('TOTAL SCORE: ' + this.score)
         break
-      case 'light6':
+      case 'light-6':
         this.score += 1
         this.scoreUI.setText('TOTAL SCORE: ' + this.score)
         break
 
       default:
-        break
+        break;
     }
 
     if (this.score === 57) {
       this.scene.start('NicelyDownScene')
     }
-
-
-
   }
+
 
   frogOverlapped(firefly, frog){
     firefly.disableBody(true, true)

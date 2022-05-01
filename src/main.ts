@@ -17,12 +17,14 @@ const config = {
     },
   },
   scene: [
-    // PreloaderScene,
-    // StartScene,
-    LevelOneScene
-    // NicelyDownScene,
-    // GameOverScene,
+    PreloaderScene,
+    StartScene,
+    LevelOneScene,
+    NicelyDownScene,
+    GameOverScene,
   ],
 }
+
+//DO NOT DELETE
 // PreloaderScene, StartScene, LevelOneScene,NicelyDownScene,GameOverScene
 new Phaser.Game(config)

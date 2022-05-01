@@ -1,5 +1,5 @@
 export default class LightSprite extends Phaser.Physics.Arcade.Sprite {
-  // points: number
+  points: number | undefined
 
   constructor(
     scene: Phaser.Scene,
@@ -15,12 +15,12 @@ export default class LightSprite extends Phaser.Physics.Arcade.Sprite {
     scene.add.existing(this)
     scene.physics.add.existing(this)
 
-    // if (this.points == 1) {
-    //   this.play('light-low')
-    // } else if (this.points == 5) {
-    //   this.play('light-medium')
-    // } else if (this.points == 10) {
-    //   this.play('light-high')
-    // }
+    if (this.points == 1) {
+      this.play('light-low')
+    } else if (this.points == 5) {
+      this.play('light-medium')
+    } else if (this.points == 10) {
+      this.play('light-high')
+    }
   }
 }
