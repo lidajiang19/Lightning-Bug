@@ -1,6 +1,7 @@
 import FrogSprite from '../objects/FrogSprite'
 import FireflySprite from '../objects/FireflySprite'
 import { MouseConstraint } from 'matter'
+import LightSprite from '../objects/LightSprite'
 // import LightSprite from '../objects/LightSprite'
 // import GameOverScene from './GameOverScene'
 // import { ObjectFlags } from 'typescript'
@@ -52,6 +53,15 @@ export default class LevelOneScene extends Phaser.Scene {
     //light
     let lights = this.physics.add.group()
     // classType: LightSprite,
+    // this.lights = new LightSprite(this,200,200)
+    // this.add.image(200, 200, 'light-round-1').setScale(0.5)
+    // var LightSprite = Phaser.Math.FloatBetween(13, 33)
+
+
+
+
+
+
 
     for (let x = 1; x < 4; x++) {
       for (let i = 1; i < 7; i++) {
@@ -60,7 +70,8 @@ export default class LevelOneScene extends Phaser.Scene {
         lights.create(xx, yy, 'light' + i)
       }
     }
-    lights.children.iterate((child) => {})
+    // lights.children.iterate((child) => {})
+
 
     // this.lightGroup.get(300, 300, 'round-1')
     // this.lightGroup.get(200, 200, 'round-2')
@@ -70,9 +81,10 @@ export default class LevelOneScene extends Phaser.Scene {
     this.physics.add.overlap(
       this.firefly,
       lights.children.entries,
+      // this.light-round-1,
       this.collectLights,
       null,
-      this
+      this,
     )
 
     this.physics.add.overlap(
@@ -80,8 +92,7 @@ export default class LevelOneScene extends Phaser.Scene {
       this.frog1,
       this.frogOverlapped,
       null,
-      this
-
+      this,
     )
 
     this.physics.add.overlap(
@@ -89,7 +100,7 @@ export default class LevelOneScene extends Phaser.Scene {
       this.frog2,
       this.frogOverlapped,
       null,
-      this
+      this,
     )
 
     // this.physics.add.overlap(this.frog1, this.firefly, this.frogOverlapped)
@@ -144,7 +155,7 @@ export default class LevelOneScene extends Phaser.Scene {
   collectLights(firefly,lights) {
     lights.destroy()
     switch (lights.texture.key) {
-      case 'light1':
+      case 'light-round-1':
         this.score += 5
         this.scoreUI.setText(`TOTAL SCORE: `+this.score)
         break
