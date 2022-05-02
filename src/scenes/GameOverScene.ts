@@ -38,8 +38,6 @@ export default class GameOverScene extends Phaser.Scene {
       this.scene.start('LevelOneScene')
     })
 
-
-
   }
 
 }

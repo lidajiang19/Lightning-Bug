@@ -54,7 +54,7 @@ export default class LevelOneScene extends Phaser.Scene {
         lights.create(xx, yy, 'light' + i)
       }
     }
-    // lights.children.iterate((child) => {})
+    lights.children.iterate((child) => {})
 
     // this.lightGroup.get(300, 300, 'round-1')
     // this.lightGroup.get(200, 200, 'round-2')
@@ -65,12 +65,16 @@ export default class LevelOneScene extends Phaser.Scene {
       this.firefly,
       lights.children.entries,
       this.collectLights,
+      null,
+      this
     )
 
     this.physics.add.overlap(
       this.firefly,
       this.frog1,
       this.frogOverlapped,
+      null,
+      this
 
     )
 
@@ -78,6 +82,8 @@ export default class LevelOneScene extends Phaser.Scene {
       this.firefly,
       this.frog2,
       this.frogOverlapped,
+      null,
+      this
     )
 
     // this.physics.add.overlap(this.frog1, this.firefly, this.frogOverlapped)
@@ -130,46 +136,47 @@ export default class LevelOneScene extends Phaser.Scene {
   }
 
   collectLights(firefly,lights) {
-    lights.disableBody(true, true)
+    lights.destroy()
     switch (lights.texture.key) {
-      case 'light-1':
+      case 'light1':
         this.score += 5
-        this.scoreUI.setText('TOTAL SCORE: ' + this.score)
+        this.scoreUI.setText(`TOTAL SCORE: `+this.score)
         break
-      case 'light-2':
+      case 'light2':
         this.score += 4
-        this.scoreUI.setText('TOTAL SCORE: ' + this.score)
+        this.scoreUI.setText(`TOTAL SCORE: `+ this.score)
         break
-      case 'light-3':
+      case 'light3':
         this.score += 4
-        this.scoreUI.setText('TOTAL SCORE: ' + this.score)
+        this.scoreUI.setText(`TOTAL SCORE: ` + this.score)
         break
-      case 'light-4':
+      case 'light4':
         this.score += 3
-        this.scoreUI.setText('TOTAL SCORE: ' + this.score)
+        this.scoreUI.setText(`TOTAL SCORE: ` + this.score)
         break
-      case 'light-5':
+      case 'light5':
         this.score += 2
-        this.scoreUI.setText('TOTAL SCORE: ' + this.score)
+        this.scoreUI.setText(`TOTAL SCORE: `+ this.score)
         break
-      case 'light-6':
+      case 'light6':
         this.score += 1
-        this.scoreUI.setText('TOTAL SCORE: ' + this.score)
+        this.scoreUI.setText(`TOTAL SCORE: ` + this.score)
         break
 
       default:
         break;
+
     }
 
-    if (this.score === 57) {
+    if (this.score === 50) {
       this.scene.start('NicelyDownScene')
     }
   }
 
-
   frogOverlapped(firefly, frog){
-    firefly.disableBody(true, true)
+    frog.destroy()
     this.scene.start('GameOverScene')
+    // this.scene.start('GameOverScene')
 
   }
 }

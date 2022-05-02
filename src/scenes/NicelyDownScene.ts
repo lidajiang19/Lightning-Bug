@@ -20,7 +20,7 @@ export default class NicelyDownScene extends Phaser.Scene {
     })
 
 
-    //不可运行 why?
+    //不可运行
     // this.add.image(500, 360, 'down')
     // let playButton = this.add.image(500, 560, 'again').setScale(0.5)
 
