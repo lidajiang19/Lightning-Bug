@@ -23,6 +23,7 @@ const config = {
     NicelyDownScene,
     GameOverScene,
   ],
+  
 }
 
 //DO NOT DELETE

@@ -3,6 +3,10 @@ export default class PreloaderScene extends Phaser.Scene {
     super({ key: 'PreloaderScene' })
   }
   preload() {
+
+    //music
+    this.load.audio('bgm', 'assets/Mountain.mp3')
+
     //forest image
     this.load.image('forest', 'assets/img/forest.png')
 
@@ -15,7 +19,7 @@ export default class PreloaderScene extends Phaser.Scene {
     // this.load.image('light-round-6', 'assets/img/light-round-6.png')
 
 
-    
+
     for (let i = 1; i < 7; i++) {
       this.load.image('light' + i, 'assets/img/light-round-' + i + '.png')
     }
@@ -51,3 +55,4 @@ export default class PreloaderScene extends Phaser.Scene {
     this.scene.start('StartScene')
   }
 }
+

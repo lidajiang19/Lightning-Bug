@@ -1,8 +1,10 @@
 import FrogSprite from '../objects/FrogSprite'
 import FireflySprite from '../objects/FireflySprite'
+import { MouseConstraint } from 'matter'
 // import LightSprite from '../objects/LightSprite'
 // import GameOverScene from './GameOverScene'
 // import { ObjectFlags } from 'typescript'
+
 
 export default class LevelOneScene extends Phaser.Scene {
   frog!: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody
@@ -25,6 +27,10 @@ export default class LevelOneScene extends Phaser.Scene {
   }
 
   create() {
+    //bg music
+    let music = this.sound.add('bgm')
+    music.play()
+
     //bg image
     this.add.image(0, 0, 'forest').setOrigin(0.0)
 

@@ -8,6 +8,8 @@ export default class StartScene extends Phaser.Scene {
   }
 
   create() {
+    
+
     //bg
     Phaser.Display.Color.HexStringToColor('#00151C')
     this.add.image(500, 360, 'start')
