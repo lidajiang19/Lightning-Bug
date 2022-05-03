@@ -49,6 +49,7 @@ export default class LevelOneScene extends Phaser.Scene {
       .setScale(1 / 2)
       .refreshBody()
     // this.firefly.fly()
+    this.load.spritesheet('firefly','assets/img/firefly/firefly.png')
 
     //light
     let lights = this.physics.add.group()
@@ -61,13 +62,11 @@ export default class LevelOneScene extends Phaser.Scene {
 
 
 
-
-
     for (let x = 1; x < 4; x++) {
       for (let i = 1; i < 7; i++) {
         let xx = Phaser.Math.Between(0, 1000)
         let yy = Phaser.Math.Between(0, 720)
-        lights.create(xx, yy, 'light' + i)
+        lights.create(xx, yy, 'light' + i).setScale(0.5)
       }
     }
     // lights.children.iterate((child) => {})
@@ -126,6 +125,10 @@ export default class LevelOneScene extends Phaser.Scene {
       color: '#fff',
       fontFamily: 'Amatic SC',
     })
+
+
+
+
   }
 
 
