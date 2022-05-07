@@ -5,36 +5,90 @@ export default class FireflySprite extends Phaser.Physics.Arcade.Sprite {
     scene.add.existing(this)
     scene.physics.add.existing(this)
 
+    this.body.setSize(90, 90)
+
     this._makeAnimations()
 
-    this.play('firefly-still')
+    // this.play('firefly')
   }
 
-  fly(){
-      this.play('firefly-move',true)
+  moveleft() {
+      this.play('left', true)
+  }
+  moveright(){
+      this.play('right', true)
+  }
+  moveup(){
+    this.play('up', true)
+  }
+  movedown(){
+     this.play('down', true)
+
   }
 
-//   still() {
-//     this.play('frog-still', true)
-//   }
+
 
   _makeAnimations() {
+
+    //
     this.anims.create({
-      key: 'firefly-still',
-      frames: [{ key: 'firefly', frame: 'firefly-2' }],
+      key: 'left',
+      frames: this.anims.generateFrameNames('firefly1', {
+        prefix: 'firefly-',
+        start: 5,
+        end: 6,
+      }),
       frameRate: 10,
       repeat: -1,
     })
 
     this.anims.create({
-      key: 'firefly-move',
-      frames: this.anims.generateFrameNames('firefly', {
+      key: 'right',
+      frames: this.anims.generateFrameNames('firefly1', {
         prefix: 'firefly-',
         start: 1,
         end: 2,
       }),
-      frameRate: 8,
+      frameRate: 10,
       repeat: -1,
     })
+
+    this.anims.create({
+      key: 'up',
+      frames: this.anims.generateFrameNames('firefly1', {
+        prefix: 'firefly-',
+        start: 3,
+        end: 4,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    })
+
+    this.anims.create({
+      key: 'down',
+      frames: this.anims.generateFrameNames('firefly1', {
+        prefix: 'firefly-',
+        start: 7,
+        end: 8,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    })
+//
+
+
+
+    // this.anims.create({
+    //   key:'fly',
+    //   frames: this.anims.generateFrameNames('firefly1', {
+    //     prefix:'firefly-',
+    //     start:1,
+    //     end:8,
+    //   }),
+    //   frameRate:10,
+    //   repeat:-1
+    // })
+
+
   }
 }
