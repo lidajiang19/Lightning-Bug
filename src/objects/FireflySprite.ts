@@ -9,7 +9,6 @@ export default class FireflySprite extends Phaser.Physics.Arcade.Sprite {
 
     this._makeAnimations()
 
-    // this.play('firefly')
   }
 
   moveleft() {
@@ -23,7 +22,6 @@ export default class FireflySprite extends Phaser.Physics.Arcade.Sprite {
   }
   movedown(){
      this.play('down', true)
-
   }
 
 
@@ -42,16 +40,7 @@ export default class FireflySprite extends Phaser.Physics.Arcade.Sprite {
       repeat: -1,
     })
 
-    this.anims.create({
-      key: 'right',
-      frames: this.anims.generateFrameNames('firefly1', {
-        prefix: 'firefly-',
-        start: 1,
-        end: 2,
-      }),
-      frameRate: 10,
-      repeat: -1,
-    })
+
 
     this.anims.create({
       key: 'up',
@@ -74,9 +63,19 @@ export default class FireflySprite extends Phaser.Physics.Arcade.Sprite {
       frameRate: 10,
       repeat: -1,
     })
+
+
+    this.anims.create({
+      key: 'right',
+      frames: this.anims.generateFrameNames('firefly1', {
+        prefix: 'firefly-',
+        start: 1,
+        end: 2,
+      }),
+      frameRate: 10,
+      repeat: -1,
+    })
 //
-
-
 
     // this.anims.create({
     //   key:'fly',

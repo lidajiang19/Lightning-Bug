@@ -35,19 +35,20 @@ export default class LevelOneScene extends Phaser.Scene {
     this.frog1 = new FrogSprite(this, 200, 480).setScale(1 / 2).refreshBody()
     this.frog2 = new FrogSprite(this, 800, 550).setScale(1 / 2).refreshBody()
 
-    // frog prey
+    // frogs prey
     this.frog1.prey()
     this.frog2.prey()
 
     //firefly
+
     this.firefly = new FireflySprite(this, 20, 400)
       .setScale(0.5)
       .refreshBody()
       .setBounce(0.2)
       .setCollideWorldBounds(true)
+      .setOrigin(0.5, 0.5)
 
-    //firefly move
-    // this.firefly.move()
+    //firefly movea
     this.firefly.moveright()
     this.firefly.moveleft()
     this.firefly.moveup()

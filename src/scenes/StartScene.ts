@@ -17,7 +17,7 @@ export default class StartScene extends Phaser.Scene {
 
     //bg
     Phaser.Display.Color.HexStringToColor('#00151C')
-    
+
 
     this.add.image(500, 360, 'start')
     let playButton = this.add.image(500, 560, 'startbutton').setScale(0.5)
@@ -27,6 +27,7 @@ export default class StartScene extends Phaser.Scene {
 
     playButton.on('pointerdown', () => {
       this.scene.start('LevelOneScene')
+      console.log('start-selected')
     })
   }
 }
