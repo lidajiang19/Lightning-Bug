@@ -22,9 +22,6 @@ export default class PreloaderScene extends Phaser.Scene {
       this.load.image('light' + i, 'assets/img/light-round-' + i + '.png')
     }
 
-    //light work
-
-    // this.load.image('play-again-button','assets/img/play-again-button.png')
 
     //frog
     this.load.atlas(

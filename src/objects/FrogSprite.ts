@@ -9,16 +9,13 @@ export default class FrogSprite extends Phaser.Physics.Arcade.Sprite {
 
     this._makeAnimations()
 
-    // this.play('frog-still')
+
   }
 
   prey() {
     this.play('frog-prey', true)
   }
 
-  //   still() {
-  //      this.play('frog-still', true)
-  //    }
 
   _makeAnimations() {
     this.anims.create({

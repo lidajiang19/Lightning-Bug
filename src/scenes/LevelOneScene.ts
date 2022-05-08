@@ -46,9 +46,8 @@ export default class LevelOneScene extends Phaser.Scene {
       .refreshBody()
       .setBounce(0.2)
       .setCollideWorldBounds(true)
-      .setOrigin(0.5, 0.5)
 
-    //firefly movea
+    //firefly move
     this.firefly.moveright()
     this.firefly.moveleft()
     this.firefly.moveup()
@@ -57,10 +56,7 @@ export default class LevelOneScene extends Phaser.Scene {
 
     //light
     let lights = this.physics.add.group()
-    // classType: LightSprite,
-    // this.lights = new LightSprite(this,200,200)
-    // this.add.image(200, 200, 'light-round-1').setScale(0.5)
-    // var LightSprite = Phaser.Math.FloatBetween(13, 33)
+
 
     for (let x = 1; x < 7; x++) {
       for (let i = 1; i < 12; i++) {
@@ -69,16 +65,14 @@ export default class LevelOneScene extends Phaser.Scene {
         lights.create(xx, yy, 'light' + i).setScale(0.75)
       }
     }
-    // lights.children.iterate((child) => {})
+    lights.children.iterate((child) => {})
 
-    // this.lightGroup.get(300, 300, 'round-1')
-    // this.lightGroup.get(200, 200, 'round-2')
+
 
     //collison
     this.physics.add.overlap(
       this.firefly,
       lights.children.entries,
-      // this.light-round-1,
       this.collectLights,
       null,
       this,
@@ -99,20 +93,6 @@ export default class LevelOneScene extends Phaser.Scene {
       null,
       this,
     )
-
-    // this.physics.add.overlap(this.frog1, this.firefly, this.frogOverlapped)
-
-    //   frogOverlapped(firefly: FireflySprite, frog1: FrogSprite) {
-    //   console.log('YOU LOSE')
-    // }
-
-    // lightOverlapped(firefly: FireflySprite, lights: LightSprite) {
-    //   light.destroy()
-    // }
-
-    // this.physics.add.overlap(this.light1, this.firefly, undefined)
-    // this.cameras.main.startFollow(this.firefly)
-    // this.cameras.main.setZoom(2)
 
     //keyboard
     this.cursors = this.input.keyboard.createCursorKeys()
@@ -153,7 +133,7 @@ export default class LevelOneScene extends Phaser.Scene {
   }
 
   collectLights(firefly, lights) {
-    lights.destroy()
+    lights.destroy(true,true)
     switch (lights.texture.key) {
       case 'light1':
         this.score += 5
@@ -204,14 +184,19 @@ export default class LevelOneScene extends Phaser.Scene {
         break
     }
 
-    if (this.score === 117) {
+    // if(lights.countActive(true) == 0){
+    //    this.scene.start('NicelyDownScene')
+    // }
+
+    if (this.score >= 230) {
       this.scene.start('NicelyDownScene')
     }
   }
 
   frogOverlapped(firefly, frog) {
-    frog.destroy()
+    frog.destroy(true,true)
     this.scene.start('GameOverScene')
-    // this.scene.start('GameOverScene')
+  
   }
 }
+

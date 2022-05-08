@@ -21,7 +21,7 @@ export default class StartScene extends Phaser.Scene {
 
     this.add.image(500, 360, 'start')
     let playButton = this.add.image(500, 560, 'startbutton').setScale(0.5)
-    // let playButton = this.add.image(500,560, 'start-selected').setScale(0.5)
+    
 
     playButton.setInteractive()
 

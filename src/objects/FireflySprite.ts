@@ -28,7 +28,7 @@ export default class FireflySprite extends Phaser.Physics.Arcade.Sprite {
 
   _makeAnimations() {
 
-    //
+
     this.anims.create({
       key: 'left',
       frames: this.anims.generateFrameNames('firefly1', {
@@ -75,18 +75,6 @@ export default class FireflySprite extends Phaser.Physics.Arcade.Sprite {
       frameRate: 10,
       repeat: -1,
     })
-//
-
-    // this.anims.create({
-    //   key:'fly',
-    //   frames: this.anims.generateFrameNames('firefly1', {
-    //     prefix:'firefly-',
-    //     start:1,
-    //     end:8,
-    //   }),
-    //   frameRate:10,
-    //   repeat:-1
-    // })
 
 
   }
