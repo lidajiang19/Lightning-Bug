@@ -1,4 +1,4 @@
-html,
+/* html,
 body {
   height: 100%;
   margin: 0;
@@ -7,13 +7,13 @@ body {
   display: grid;
   place-items: center;
   /* margin: 0 auto; */
-}
+/* }
 
 body {
   text-align: center;
   background-color: #6c754f;
   /* background-color: rgb(127, 177, 159); */
-}
+/* }
 
 {
     test: /\.css$/,
@@ -21,7 +21,7 @@ body {
         'style-loader',
         'css-loader'
     ]
-}
+} */
 
 
 
